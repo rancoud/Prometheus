@@ -1,0 +1,49 @@
+{
+    "name": "rancoud/prometheus",
+    "description": "Prometheus PHP Client using Rancoud's packages",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastien Rancoud",
+            "email": "contact@rancoud.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Rancoud\\Prometheus\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=8.4.0",
+        "ext-json": "*"
+    },
+    "suggest": {
+        "ext-pdo": "Needed for databases",
+        "ext-pdo_sqlite": "Needed to use SQLite",
+        "rancoud/database": "Needed for database storage"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpunit/phpunit": "^11.0",
+        "rancoud/database": "^7.0"
+    },
+    "scripts": {
+        "ci": [
+            "@lint",
+            "@test"
+        ],
+        "lint": [
+            "php-cs-fixer fix -vvv"
+        ],
+        "test": [
+            "phpunit --colors --coverage-html ./coverage"
+        ]
+    }
+}
