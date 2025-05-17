@@ -742,7 +742,11 @@ class SQLite implements Adapter
         ]);
     }
 
-    /** @throws DatabaseException */
+    /**
+     * Remove all expired summaries sample according to the TTL.
+     *
+     * @throws DatabaseException
+     */
     public function deleteExpiredSummaries(): void
     {
         $sql = <<<SQL
@@ -782,7 +786,11 @@ class SQLite implements Adapter
         $this->database->truncateTables(...$tables);
     }
 
-    /** @throws DatabaseException */
+    /**
+     * Drop all tables.
+     *
+     * @throws DatabaseException
+     */
     public function deleteStorage(): void
     {
         $tables = [
