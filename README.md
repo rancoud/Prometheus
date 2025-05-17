@@ -3,8 +3,8 @@
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/rancoud/Prometheus)
 [![Packagist Version](https://img.shields.io/packagist/v/rancoud/Prometheus)](https://packagist.org/packages/rancoud/Prometheus)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/rancoud/Prometheus)](https://packagist.org/packages/rancoud/Prometheus)
-[![Composer dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](https://github.com/rancoud/Prometheus/blob/master/composer.json)
-[![Test workflow](https://img.shields.io/github/actions/workflow/status/rancoud/Prometheus/test.yml?branch=master)](https://github.com/rancoud/Prometheus/actions/workflows/test.yml)
+[![Composer dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](https://github.com/rancoud/Prometheus/blob/main/composer.json)
+[![Test workflow](https://img.shields.io/github/actions/workflow/status/rancoud/Prometheus/test.yml?branch=main)](https://github.com/rancoud/Prometheus/actions/workflows/test.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/rancoud/Prometheus?logo=codecov)](https://codecov.io/gh/rancoud/Prometheus)
 
 Prometheus client library using database, memory storage.
