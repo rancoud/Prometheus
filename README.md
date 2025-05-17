@@ -251,6 +251,8 @@ Using SQLite with memory database is same as using InMemory Database.
 ```php
 use Rancoud\Database\Configurator;
 use Rancoud\Database\Database;
+use Rancoud\Prometheus\Counter;
+use Rancoud\Prometheus\Descriptor;
 use Rancoud\Prometheus\Storage\SQLite;
 
 $params = [
@@ -265,12 +267,12 @@ $configurator = new Configurator($params);
 
 $database = new Database($configurator);
 
-$storage = new Rancoud\Prometheus\SQLite($database);
+$storage = new SQLite($database);
 
 $counter = new Counter($storage, new Descriptor("example"));
 ```
 
-## Metric
+## Collector (metric)
 Constructor
 ```php
 public function __construct(Adapter $storage, Descriptor $descriptor)
@@ -460,7 +462,7 @@ Returns the default Registry (singleton).
 public static function getDefault(): self
 ```
 
-## Storage
+## Storage (Adapter interface)
 Returns metrics (counter, gauge, histogram and summary) as iterable.  
 If metric type and name is provided it will return only the specify metric.
 ```php
@@ -522,6 +524,37 @@ public function exposeHistograms(string $metricName = ''): iterable
 Returns text of summaries metric as iterable.
 ```php
 public function exposeSummaries(string $metricName = ''): iterable
+```
+
+### SQLite
+Returns text of counters metric as iterable.
+```php
+public function exposeCounters(string $metricName = ''): iterable
+```
+
+Returns text of gauges metric as iterable.
+```php
+public function exposeGauges(string $metricName = ''): iterable
+```
+
+Returns text of histograms metric as iterable.
+```php
+public function exposeHistograms(string $metricName = ''): iterable
+```
+
+Returns text of summaries metric as iterable.
+```php
+public function exposeSummaries(string $metricName = ''): iterable
+```
+
+Remove all expired summaries sample according to the TTL.
+```php
+public function deleteExpiredSummaries(): void
+```
+
+Drop all tables.
+```php
+public function deleteStorage(): void
 ```
 
 ## How to Dev

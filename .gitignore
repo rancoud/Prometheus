@@ -13,3 +13,4 @@ build/
 test.php
 coverage/
 !coverage/.gitkeep
+prometheus.db
