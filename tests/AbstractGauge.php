@@ -19,7 +19,7 @@ abstract class AbstractGauge extends TestCase
 {
     protected Adapter $storage;
 
-    public static function provideIncrementDataCases(): iterable
+    public static function provideIncDataCases(): iterable
     {
         yield 'OK - 2 labels + help' => [
             'name'          => 'my_metric',
@@ -93,7 +93,7 @@ abstract class AbstractGauge extends TestCase
      * @throws CollectorException
      * @throws DescriptorException
      */
-    #[DataProvider('provideIncrementDataCases')]
+    #[DataProvider('provideIncDataCases')]
     public function testInc(string $name, array $labels, string $help, array $values, array $labelValues, ?string $error, array $plaintexts): void
     {
         if ($error !== null) {
@@ -117,7 +117,7 @@ abstract class AbstractGauge extends TestCase
         }
     }
 
-    public static function provideDecrementDataCases(): iterable
+    public static function provideDecDataCases(): iterable
     {
         yield 'OK' => [
             'name'          => 'my_metric',
@@ -156,7 +156,7 @@ abstract class AbstractGauge extends TestCase
      * @throws CollectorException
      * @throws DescriptorException
      */
-    #[DataProvider('provideDecrementDataCases')]
+    #[DataProvider('provideDecDataCases')]
     public function testDec(string $name, array $labels, string $help, array $values, array $labelValues, ?string $error, array $plaintexts): void
     {
         if ($error !== null) {
