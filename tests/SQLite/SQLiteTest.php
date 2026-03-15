@@ -14,7 +14,9 @@ use Rancoud\Prometheus\Exception\StorageException;
 use Rancoud\Prometheus\Storage\Operation;
 use Rancoud\Prometheus\Storage\SQLite;
 
-/** @internal */
+/**
+ * @internal
+ */
 class SQLiteTest extends TestCase
 {
     /**

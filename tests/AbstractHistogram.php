@@ -14,7 +14,9 @@ use Rancoud\Prometheus\Exception\DescriptorException;
 use Rancoud\Prometheus\Histogram;
 use Rancoud\Prometheus\Storage\Adapter;
 
-/** @internal */
+/**
+ * @internal
+ */
 abstract class AbstractHistogram extends TestCase
 {
     protected Adapter $storage;

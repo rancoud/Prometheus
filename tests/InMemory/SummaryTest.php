@@ -7,7 +7,9 @@ namespace tests\InMemory;
 use Rancoud\Prometheus\Storage\InMemory;
 use tests\AbstractSummary;
 
-/** @internal */
+/**
+ * @internal
+ */
 class SummaryTest extends AbstractSummary
 {
     protected function setUp(): void

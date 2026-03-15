@@ -14,7 +14,9 @@ use Rancoud\Prometheus\Exception\DescriptorException;
 use Rancoud\Prometheus\Gauge;
 use Rancoud\Prometheus\Storage\Adapter;
 
-/** @internal */
+/**
+ * @internal
+ */
 abstract class AbstractGauge extends TestCase
 {
     protected Adapter $storage;

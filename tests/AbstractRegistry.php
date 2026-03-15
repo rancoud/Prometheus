@@ -14,7 +14,9 @@ use Rancoud\Prometheus\Registry;
 use Rancoud\Prometheus\Storage\Adapter;
 use Rancoud\Prometheus\Summary;
 
-/** @internal */
+/**
+ * @internal
+ */
 abstract class AbstractRegistry extends TestCase
 {
     protected Adapter $storage;

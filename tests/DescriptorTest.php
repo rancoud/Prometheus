@@ -9,7 +9,9 @@ use PHPUnit\Framework\TestCase;
 use Rancoud\Prometheus\Descriptor;
 use Rancoud\Prometheus\Exception\DescriptorException;
 
-/** @internal */
+/**
+ * @internal
+ */
 class DescriptorTest extends TestCase
 {
     // region Constructor

@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Rancoud\Prometheus\Storage;
 
-/** Used by Gauge. */
+/**
+ * Used by Gauge.
+ */
 enum Operation
 {
     case Set;

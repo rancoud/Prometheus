@@ -7,7 +7,9 @@ namespace tests\InMemory;
 use Rancoud\Prometheus\Storage\InMemory;
 use tests\AbstractHistogram;
 
-/** @internal */
+/**
+ * @internal
+ */
 class HistogramTest extends AbstractHistogram
 {
     protected function setUp(): void

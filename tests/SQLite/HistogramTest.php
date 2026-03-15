@@ -11,7 +11,9 @@ use Rancoud\Prometheus\Exception\StorageException;
 use Rancoud\Prometheus\Storage\SQLite;
 use tests\AbstractHistogram;
 
-/** @internal */
+/**
+ * @internal
+ */
 class HistogramTest extends AbstractHistogram
 {
     /**

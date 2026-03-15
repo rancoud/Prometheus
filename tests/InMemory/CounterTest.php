@@ -7,7 +7,9 @@ namespace tests\InMemory;
 use Rancoud\Prometheus\Storage\InMemory;
 use tests\AbstractCounter;
 
-/** @internal */
+/**
+ * @internal
+ */
 class CounterTest extends AbstractCounter
 {
     protected function setUp(): void
