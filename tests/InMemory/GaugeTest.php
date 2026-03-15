@@ -7,7 +7,9 @@ namespace tests\InMemory;
 use Rancoud\Prometheus\Storage\InMemory;
 use tests\AbstractGauge;
 
-/** @internal */
+/**
+ * @internal
+ */
 class GaugeTest extends AbstractGauge
 {
     protected function setUp(): void

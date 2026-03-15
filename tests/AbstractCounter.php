@@ -14,7 +14,9 @@ use Rancoud\Prometheus\Exception\CollectorException;
 use Rancoud\Prometheus\Exception\DescriptorException;
 use Rancoud\Prometheus\Storage\Adapter;
 
-/** @internal */
+/**
+ * @internal
+ */
 abstract class AbstractCounter extends TestCase
 {
     protected Adapter $storage;

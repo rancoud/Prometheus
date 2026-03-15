@@ -7,7 +7,9 @@ namespace tests\InMemory;
 use Rancoud\Prometheus\Storage\InMemory;
 use tests\AbstractRegistry;
 
-/** @internal */
+/**
+ * @internal
+ */
 class RegistryTest extends AbstractRegistry
 {
     protected function setUp(): void

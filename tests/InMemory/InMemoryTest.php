@@ -10,7 +10,9 @@ use Rancoud\Prometheus\Exception\StorageException;
 use Rancoud\Prometheus\Storage\InMemory;
 use Rancoud\Prometheus\Storage\Operation;
 
-/** @internal */
+/**
+ * @internal
+ */
 class InMemoryTest extends TestCase
 {
     /**

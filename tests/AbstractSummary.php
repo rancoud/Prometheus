@@ -14,7 +14,9 @@ use Rancoud\Prometheus\Exception\DescriptorException;
 use Rancoud\Prometheus\Storage\Adapter;
 use Rancoud\Prometheus\Summary;
 
-/** @internal */
+/**
+ * @internal
+ */
 abstract class AbstractSummary extends TestCase
 {
     protected Adapter $storage;
